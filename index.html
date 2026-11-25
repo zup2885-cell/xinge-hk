@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>新哥在香港 — 账号复盘与内容规划（抖音与微信视频号）</title>
+  <title>新哥在香港 账号复盘与内容规划 抖音和微信视频号</title>
   <style>
     :root {
       --bg: #f4f6fa;
@@ -951,16 +951,121 @@
         padding: 18px 14px 60px;
       }
     }
+
+    /* ===== 2026-11-25 排版优化 ===== */
+    body { font-size: 15.5px; line-height: 1.75; }
+    .section { margin-bottom: 52px; }
+    .sec-sub { font-size: 14.5px; line-height: 1.8; max-width: 860px; }
+    .tag { white-space: normal; }
+
+    /* 4个问题改成两列，读起来不挤 */
+    .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .issue-item { padding: 22px 24px; border-top: 3px solid var(--primary); }
+    .issue-item h3 { font-size: 16.5px; margin-bottom: 10px; }
+    .issue-item p { font-size: 14.5px; line-height: 1.85; }
+
+    /* 两条作品对比卡 */
+    .vs-card { grid-template-columns: 180px 1fr; }
+    .vs-card > div { padding: 18px 20px; }
+    .vs-title { font-weight: 700; font-size: 15.5px; line-height: 1.5; color: var(--ink); }
+    .vs-sub { font-size: 12.5px; color: var(--muted); margin: 2px 0 8px; }
+    .vs-desc { font-size: 14px; line-height: 1.8; color: var(--ink-2); }
+    .note-box {
+      margin-top: 16px; padding: 12px 16px; border-radius: 8px;
+      background: var(--warn-soft); border: 1px solid #fde68a;
+      font-size: 13.5px; line-height: 1.8; color: #92400e;
+    }
+    .note-box strong { margin-right: 6px; }
+
+    /* 逐句拆解 */
+    .frame-text { font-size: 13.5px; line-height: 1.75; padding: 12px 14px; }
+    td { font-size: 14px; line-height: 1.85; padding: 16px 16px; }
+    th { font-size: 13px; padding: 12px 16px; }
+    .quote {
+      border-left: 3px solid var(--line-strong);
+      padding: 2px 0 2px 12px;
+      color: var(--ink);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+    .quote b { color: var(--primary); font-weight: 700; margin-right: 6px; }
+    .q {
+      background: #fef9c3;
+      color: #713f12;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .lbl {
+      display: inline-block; font-size: 12px; font-weight: 700;
+      padding: 1px 8px; border-radius: 4px; margin-right: 8px;
+      line-height: 1.6; vertical-align: 1px;
+    }
+    .lbl-good { background: var(--good-soft); color: var(--good); }
+    .lbl-bad  { background: var(--accent-soft); color: var(--accent); }
+    .lbl-tip  { background: var(--primary-light); color: var(--primary); }
+    .lbl-plain { background: #f1f5f9; color: var(--ink-2); }
+    td .lbl { margin-top: 4px; }
+    td br + .lbl { margin-top: 10px; }
+
+    /* 对标卡 */
+    .ttl { font-weight: 700; color: var(--ink); }
+    .bench-top h3 .ttl { display: block; font-size: 15px; margin-top: 4px; line-height: 1.55; }
+    .bench-top h3 small { font-size: 12.5px; font-weight: 500; color: var(--muted); margin-left: 6px; }
+    .bench-meta { font-size: 13px; line-height: 1.8; }
+    .bench-meta i, footer i {
+      display: inline-block; width: 1px; height: 11px; background: var(--line-strong);
+      margin: 0 8px; vertical-align: -1px;
+    }
+    .bench-text { font-size: 14px; line-height: 1.85; color: var(--ink-2); display: flex; flex-direction: column; gap: 12px; }
+    .takeaway { font-size: 14px; line-height: 1.85; padding: 14px 18px; }
+    .takeaway ol { margin: 8px 0 0 20px; display: flex; flex-direction: column; gap: 4px; }
+
+    /* 方案卡 */
+    .plan-head {
+      display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap;
+      border-bottom: 1px solid #e2e8f0; padding-bottom: 12px;
+    }
+    .plan-head strong { font-size: 16.5px; }
+    .plan-head.wechat { border-bottom-color: #bbf7d0; }
+    .plan-head.wechat strong { color: #065f46; }
+    .kv-row { font-size: 14px; line-height: 1.85; }
+    .plain-ol { margin: 0 0 0 18px; display: flex; flex-direction: column; gap: 4px; }
+    .cover-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cover-card { border-radius: 8px; padding: 10px; font-size: 12.5px; line-height: 1.7; color: var(--ink-2); }
+    .cover-card.old { border: 1px solid #fecaca; background: #fffafa; }
+    .cover-card.new { border: 1px solid #cbd5e1; background: #ffffff; }
+    .cover-card img { width: 100%; height: 130px; object-fit: cover; border-radius: 6px; cursor: zoom-in; display: block; margin-bottom: 8px; }
+    .cover-card strong { display: block; color: var(--ink); }
+    .douyin-box, .wechat-box { font-size: 13.5px; line-height: 1.85; }
+    .bio-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; gap: 8px; }
+    .bio-head strong { font-size: 13.5px; }
+    .bio-wrap.stack { display: flex; flex-direction: column; gap: 14px; }
+    .bio-pre { font-size: 13.5px; line-height: 1.85; }
+    .panel-title { font-size: 17px; font-weight: 700; margin-bottom: 14px; }
+    .voice-box { font-size: 14px; line-height: 1.85; }
+    .voice-box .q { display: inline; }
+
+    @media (max-width: 760px) {
+      body { font-size: 15px; }
+      .grid-4 { grid-template-columns: 1fr; }
+      .vs-card { grid-template-columns: 1fr; }
+      .vs-thumb { min-height: 200px; max-height: 240px; border-right: none; border-bottom: 1px solid var(--line); }
+      .cover-compare { grid-template-columns: 1fr; }
+      .issue-item { padding: 18px; }
+    }
   </style>
 </head>
 <body>
 
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="doc-title">新哥在香港 · 账号复盘与内容规划<span>抖音与微信视频号 · 80后香港人文漫谈</span></div>
+      <div class="doc-title">新哥在香港 账号复盘与内容规划<span>抖音和微信视频号</span></div>
       <nav class="nav-links">
         <a href="#diag">风格诊断</a>
-        <a href="#transcript">2条作品逐句拆解</a>
+        <a href="#transcript">两条作品逐句拆解</a>
         <a href="#benchmarks">同类型对标</a>
         <a href="#template">双端方案与模板</a>
       </nav>
@@ -975,13 +1080,13 @@
         <img src="./assets/xinge_hero.jpg" alt="香港百年茶室老酸枝木茶座与点心实景" />
         <div class="hero-scrim">
           <div class="hero-main">
-            <div class="hero-kicker">2026.11 · 抖音号 51415117235 与微信视频号 · 个人账号规划</div>
-            <h1>新哥在香港：账号诊断与内容规划<span>保留“前半段风物介绍、后半段人生感悟”的原有风格</span></h1>
+            <div class="hero-kicker">2026年11月 抖音号 51415117235 和微信视频号 个人账号规划</div>
+            <h1>新哥在香港 账号诊断与内容规划<span>保留前半段介绍风物、后半段聊人生感悟的原有风格</span></h1>
           </div>
           <div class="hero-pills">
-            <span class="hero-pill">2 条作品逐句拆解</span>
-            <span class="hero-pill">5 个香港号对标参考</span>
-            <span class="hero-pill">抖音与视频号双端策略</span>
+            <span class="hero-pill">两条作品逐句拆解</span>
+            <span class="hero-pill">5个香港号对标参考</span>
+            <span class="hero-pill">抖音和视频号双端策略</span>
           </div>
         </div>
       </div>
@@ -989,27 +1094,27 @@
       <div class="hero-strip">
         <div class="strip-item">
           <div class="strip-label">
-            <span>抖音现状 · 新哥在香港</span>
-            <span class="tag tag-warn">已断更 10 天</span>
+            <span>抖音现状</span>
+            <span class="tag tag-warn">截至11月23日已10天未更新</span>
           </div>
-          <div class="strip-val">2 作品 / 9 粉丝 / 67 获赞</div>
-          <div class="strip-note">简介：一个在香港生活的80后 ｜ 儒雅西装格纹衬衫出镜</div>
+          <div class="strip-val">2作品 9粉丝 67获赞</div>
+          <div class="strip-note">主页简介 一个在香港生活的80后</div>
         </div>
         <div class="strip-item">
           <div class="strip-label">
-            <span>第 1 条《陆羽茶室》表现亮眼</span>
-            <span class="tag tag-green">收藏转发双高</span>
+            <span>第1条 陆羽茶室</span>
+            <span class="tag tag-green">收藏转发都不错</span>
           </div>
-          <div class="strip-val">50 赞 / 19 收藏 / 19 转发</div>
-          <div class="strip-note">50 赞里就有 19 人收藏、19 人转发，说明“老店介绍+反内耗感悟”路子对头</div>
+          <div class="strip-val">50赞 19收藏 19转发</div>
+          <div class="strip-note">50个赞里有19人收藏、19人转发，说明老店介绍加反内耗感悟这条路，有人愿意存下来、转给朋友</div>
         </div>
         <div class="strip-item">
           <div class="strip-label">
-            <span>重点新增阵地</span>
-            <span class="tag tag-blue">重点发力视频号</span>
+            <span>建议新增阵地</span>
+            <span class="tag tag-blue">重点试视频号</span>
           </div>
-          <div class="strip-val">微信视频号 + 前 5 秒悬念</div>
-          <div class="strip-note">35~60 岁人群极爱蔡澜、金庸与老港掌故，在微信里更容易被转发带火</div>
+          <div class="strip-val">微信视频号 加 开头先抛故事</div>
+          <div class="strip-note">对蔡澜、金庸和老香港有感情的中年人，在微信里更习惯转给朋友和老友群</div>
         </div>
       </div>
     </section>
@@ -1018,72 +1123,77 @@
     <section id="diag" class="section" style="margin-top: 36px;">
       <div class="sec-head">
         <div>
-          <h2><span>01</span> 两条现有作品对比与 4 个主要问题</h2>
-          <p class="sec-sub">风格本身没有问题，吃亏主要在开头节奏太慢、题材偏窄、个人印记还不够明显。</p>
+          <h2><span>01</span> 两条作品对比和4个主要问题</h2>
+          <p class="sec-sub">风格本身没有问题，主要吃亏在开头太慢、题材偏窄、新哥自己的印记还不够。</p>
         </div>
       </div>
 
       <div class="compare-box">
-        <div class="compare-title">先看新哥现有的两条视频对比：同样是“前半段探店介绍、后半段聊蔡澜感悟”，为什么数据差了 5 倍？</div>
+        <div class="compare-title">同样是前半段探店、后半段聊蔡澜，两条数据差了5倍，先看差在哪</div>
         <div class="vs-row">
           <div class="vs-card good">
-            <img class="vs-thumb" src="./assets/xinge_v2_luyu.png" alt="陆羽茶室50赞视频截图" onclick="openLightbox(this.src, '第1条《蔡澜最爱的那口烧麦，治好了我的精神内耗》（02:47）—— 50赞 / 9评 / 19收藏 / 19转发')" />
+            <img class="vs-thumb" src="./assets/xinge_v2_luyu.png" alt="陆羽茶室视频截图" onclick="openLightbox(this.src, '第1条 蔡澜最爱的那口烧麦，治好了我的精神内耗 时长02分47秒 50赞 9评论 19收藏 19转发')" />
             <div>
-              <span class="tag tag-green" style="margin-bottom: 6px;">11月10日 20:10 首发 · 50 赞 / 19 收藏 / 19 转发</span>
-              <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">《蔡澜最爱的那口烧麦，治好了我的精神内耗》（陆羽茶室）</div>
-              <div style="font-size: 13px; color: var(--ink-2);">
-                发在晚间 20:10 黄金时段，前 52 秒讲百年陆羽茶室、老酸枝木桌椅、粤语点单尝酿猪润烧麦；00:53 起切入《十三邀》，随后由朋友提问引出金庸给蔡澜作序、蔡澜晚年清空收藏品，最后落到“吃好睡好本身就很有意义”。<strong>节奏完整，百年茶室门头一眼有故事感。</strong>
+              <span class="tag tag-green" style="margin-bottom: 8px;">11月10日 20:10 发布 50赞 19收藏 19转发</span>
+              <div class="vs-title">蔡澜最爱的那口烧麦，治好了我的精神内耗</div>
+              <div class="vs-sub">拍摄地 陆羽茶室</div>
+              <div class="vs-desc">
+                晚上8点多发布。前52秒讲百年陆羽茶室、老酸枝木桌椅、用粤语点单尝酿猪润烧麦，00:53开始聊十三邀，再由朋友提问引出金庸给蔡澜作序、蔡澜晚年清空收藏品，最后落到吃好睡好本身就很有意义。<strong>节奏完整，百年茶室门头一看就有故事感。</strong>
               </div>
             </div>
           </div>
 
           <div class="vs-card bad">
-            <img class="vs-thumb" src="./assets/xinge_v1_hotpot.png" alt="九龙城街市火锅10赞视频截图" onclick="openLightbox(this.src, '第2条《九龙城街市3楼熟食中心——蔡澜的办公室》（02:25）—— 10赞 / 3评 / 2收藏 / 1转发')" />
+            <img class="vs-thumb" src="./assets/xinge_v1_hotpot.png" alt="九龙城街市火锅视频截图" onclick="openLightbox(this.src, '第2条 九龙城街市3楼熟食中心，蔡澜的办公室 时长02分25秒 10赞 3评论 2收藏 1转发')" />
             <div>
-              <span class="tag tag-red" style="margin-bottom: 6px;">11月13日 06:04 发布 · 掉到 10 赞 / 2 收藏 / 1 转发</span>
-              <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">《九龙城街市3楼熟食中心——蔡澜的办公室》（沙嗲火锅）</div>
-              <div style="font-size: 13px; color: var(--ink-2);">
-                第 1 秒镜头直接怼在一口冒泡的沙嗲锅里晃，路人根本不知道这是哪；熬到 01:05 才又聊《十三邀》蔡澜同一集节目。再加上发布时间在早上 6 点刚过（错开晚间刷视频高峰），第一波冷启动互动直接吃亏。<strong>开头没留住人，题材和时间点都吃亏了。</strong>
+              <span class="tag tag-red" style="margin-bottom: 8px;">11月13日 06:04 发布 10赞 2收藏 1转发</span>
+              <div class="vs-title">九龙城街市3楼熟食中心，蔡澜的办公室</div>
+              <div class="vs-sub">拍摄地 九龙城街市沙嗲火锅</div>
+              <div class="vs-desc">
+                第1秒镜头直接对着一口冒泡的沙嗲锅晃，路人不知道这是哪里。到01:05才聊十三邀，而且还是蔡澜同一集节目。发布时间在早上6点刚过，错开了晚上刷视频的高峰。<strong>开头没留住人，选题重复，发布时间也不占优。</strong>
               </div>
             </div>
           </div>
+        </div>
+        <div class="note-box">
+          <strong>先说明一点</strong> 目前账号只有2条作品、9个粉丝，样本很小。两条差5倍，不能全算在开头上，发布时间、选题重复和刚起号的推荐量都有影响。下面的判断是从画面和台词里看出来的问题，后面多发几条再用数据验证。
         </div>
       </div>
 
       <div class="grid-4">
         <div class="issue-item">
-          <div class="issue-num">问题 01 · 前 5 秒进门太慢</div>
-          <h3>好故事藏在 1 分钟后，开头没钩子</h3>
-          <p>新哥习惯前半段先慢条斯理介绍菜品，后半段再聊感悟。但短视频前 5 秒如果不先把名士反差故事抛出来（比如第一句就说“许知远曾在这里问蔡澜读圣贤书所为何事”），90% 的路人撑不到 1 分钟后的感悟就划走了。</p>
+          <div class="issue-num">问题01 开头进门太慢</div>
+          <h3>好故事藏在1分钟以后，开头没有钩子</h3>
+          <p>新哥习惯先慢慢介绍菜品，后面再聊感悟。短视频开头几秒如果不先把名士故事抛出来，比如第一句就说许知远曾在这里问蔡澜读圣贤书所为何事，很多路人可能等不到后面的感悟就划走了。</p>
         </div>
         <div class="issue-item">
-          <div class="issue-num">问题 02 · 题库偏窄</div>
-          <h3>连续两条都在复述《十三邀》蔡澜篇</h3>
-          <p>第 1 条聊《十三邀》蔡澜在陆羽茶室，第 2 条又聊《十三邀》蔡澜在九龙城街市。如果只聊蔡澜这一集节目，拍 3 条就没素材了。要把“先介绍风物、后聊感悟”的模板扩充到金庸、黄霑、倪匡以及香港老店老街道。</p>
+          <div class="issue-num">问题02 题材偏窄</div>
+          <h3>两条都在讲十三邀蔡澜那一集</h3>
+          <p>第1条讲十三邀里蔡澜在陆羽茶室，第2条又讲同一集里蔡澜在九龙城街市。只靠这一集节目，拍不了几条就没素材了。可以把先介绍风物、后聊感悟的模板，扩展到金庸、黄霑、倪匡，还有香港的老店老街。</p>
         </div>
         <div class="issue-item">
-          <div class="issue-num">问题 03 · 个人印记太淡</div>
-          <h3>后半段聊蔡澜多，聊“新哥自己”少</h3>
-          <p>目前后半段 80% 的台词在转述许知远、蔡澜和金庸的话，新哥自己的话只有最后 20 秒。光讲名人的话不够，每次聊完蔡澜、金庸，顺带说两句新哥自己这几年在香港的真实经历，人物才能立住。</p>
+          <div class="issue-num">问题03 个人印记太淡</div>
+          <h3>后半段讲蔡澜多，讲新哥自己少</h3>
+          <p>两条视频后半段大部分时间在转述许知远、蔡澜和金庸的话，新哥自己的话基本留在最后几句。每次讲完名人，顺带说两句新哥这几年在香港的真实经历，观众才会记住新哥这个人。</p>
         </div>
         <div class="issue-item">
-          <div class="issue-num">问题 04 · 封面与定位</div>
-          <h3>白边抠图压了气质，漏挂餐厅定位</h3>
-          <p>现在封面把新哥加粗白边抠图、手里P两块生牛肉，像搞笑吃播，压住了他穿西装戴眼镜的儒雅书卷气；而且两条视频都没挂香港餐厅的地点定位，白白丢掉了所有搜索“香港老店/陆羽茶室”的精准流量。</p>
+          <div class="issue-num">问题04 封面和定位</div>
+          <h3>白边抠图压了气质，没挂餐厅定位</h3>
+          <p>现在的封面把新哥加粗白边抠出来，手里还P了两块生牛肉，看着像搞笑吃播，压住了他穿西装戴眼镜的书卷气。两条视频也都没挂餐厅地点定位，搜香港老店、陆羽茶室的人就刷不到。</p>
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Verbatim Transcript & Structural Audit -->
+    <!-- Section 2: Verbatim Transcript -->
     <section id="transcript" class="section">
       <div class="sec-head">
         <div>
-          <h2><span>02</span> 已发 2 条作品逐句拆解：先介绍、后感悟的三段结构</h2>
-          <p class="sec-sub">把两条视频每一秒的原话都整理了出来。新哥的拍法很清楚：<strong>前半段介绍香港老店与味道，中间靠同行朋友画外音提问过渡，后半段聊名士往事和自己的感悟</strong>。点击图片可放大。</p>
+          <h2><span>02</span> 两条作品逐句拆解 先介绍后感悟的三段结构</h2>
+          <p class="sec-sub">把两条视频的原话都整理了出来。新哥的拍法很清楚，<strong>前半段介绍香港老店和味道，中间靠同行朋友在镜头外提问过渡，后半段聊名士往事和自己的感悟</strong>。点击图片可以放大。</p>
         </div>
         <div class="tabs" id="vid-tabs">
-          <button class="tab-btn active" data-vid="v2">作品 1 · 陆羽茶室 (50赞 / 19藏 / 19转)</button>
-          <button class="tab-btn" data-vid="v1">作品 2 · 九龙城街市火锅 (10赞 / 2藏 / 1转)</button>
+          <button class="tab-btn active" data-vid="v2">作品1 陆羽茶室 50赞</button>
+          <button class="tab-btn" data-vid="v1">作品2 九龙城街市火锅 10赞</button>
         </div>
       </div>
 
@@ -1091,31 +1201,31 @@
       <div id="panel-v2">
         <div class="frames-4">
           <div class="frame-item">
-            <img src="./assets/xinge_v2_luyu.png" alt="00:02 陆羽茶室门头" onclick="openLightbox(this.src, '00:00-00:27 前半段（建筑与历史介绍）：中环百年陆羽茶室门头、上海+岭南混搭装修、老酸枝木桌椅')" />
+            <img src="./assets/xinge_v2_luyu.png" alt="陆羽茶室门头" onclick="openLightbox(this.src, '00:00到00:27 前半段 中环陆羽茶室门头，上海和岭南混搭的装修，老酸枝木桌椅')" />
             <div class="frame-text">
-              <div class="frame-time">00:00 – 00:27 · 前半段：建筑与历史</div>
-              介绍接近 100 年的陆羽茶室（茶圣陆羽），点出上海与岭南混搭装修、老酸枝木桌椅传统一直没变。
+              <div class="frame-time">00:00到00:27 前半段 建筑和历史</div>
+              介绍开了近100年的陆羽茶室，名字取自茶圣陆羽，点出上海和岭南混搭的装修，老酸枝木桌椅一直没换。
             </div>
           </div>
           <div class="frame-item">
-            <img src="./assets/xinge_v2_tasting.png" alt="00:48 品尝酿猪润烧麦" onclick="openLightbox(this.src, '00:28-00:52 前半段（粤语互动与试吃）：跟茶楼阿姐讲粤语，品尝招牌酿猪润烧麦')" />
+            <img src="./assets/xinge_v2_tasting.png" alt="品尝酿猪润烧麦" onclick="openLightbox(this.src, '00:28到00:52 前半段 跟茶楼阿姐讲粤语，品尝招牌酿猪润烧麦')" />
             <div class="frame-text">
-              <div class="frame-time">00:28 – 00:52 · 前半段：粤语点单与试吃</div>
-              跟服务员粤语互动（“唔该，大包系嘛”“呢个系招牌嚟嘅”），细品酿猪润烧麦（猪肉、鲜虾、淡淡苦味融合）。
+              <div class="frame-time">00:28到00:52 前半段 粤语点单和试吃</div>
+              跟服务员用粤语聊两句，唔该，大包系嘛，再细品酿猪润烧麦，猪肉、鲜虾和一点淡淡的苦味混在一起。
             </div>
           </div>
           <div class="frame-item">
-            <img src="./assets/xinge_v2_shisanyao.png" alt="01:04 引入十三邀与金庸作序" onclick="openLightbox(this.src, '00:53-02:20 中场转折与名士掌故：切入《十三邀》蔡澜饮茶，再由朋友画外音提问引出金庸给蔡澜作序')" />
+            <img src="./assets/xinge_v2_shisanyao.png" alt="引入十三邀与金庸作序" onclick="openLightbox(this.src, '00:53到02:20 中场 聊十三邀里蔡澜在这里饮茶，再由朋友提问引出金庸给蔡澜作序')" />
             <div class="frame-text">
-              <div class="frame-time">00:53 – 02:20 · 中场提问与金庸蔡澜掌故</div>
-              先聊《十三邀》取景地，随后朋友画外音问“蔡澜对您影响大吗”，引出金庸大蔡澜 17 岁却称“蔡澜兄”、夸他真正潇洒。
+              <div class="frame-time">00:53到02:20 中场提问和金庸蔡澜掌故</div>
+              先聊十三邀在这里取景，朋友在镜头外问蔡澜对您影响大吗，引出金庸比蔡澜大17岁却称他蔡澜兄、夸他是真正潇洒的人。
             </div>
           </div>
           <div class="frame-item">
-            <img src="./assets/xinge_v2_close.png" alt="02:37 后半段个人感悟收尾" onclick="openLightbox(this.src, '02:23-02:47 后半段（80后人生感悟）：聊蔡澜晚年清空收藏品，“如果现实那么辛苦，逃避一下也无所谓，吃好睡好本身就很有意义”')" />
+            <img src="./assets/xinge_v2_close.png" alt="后半段个人感悟收尾" onclick="openLightbox(this.src, '02:23到02:47 后半段 聊蔡澜晚年清空收藏品，现实那么辛苦逃避一下也无所谓，吃好睡好本身就很有意义')" />
             <div class="frame-text">
-              <div class="frame-time">02:23 – 02:47 · 后半段：80后反内耗感悟</div>
-              讲蔡澜晚年断舍离清空收藏品，新哥温柔反驳网评：“如果现实那么辛苦，逃避一下也无所谓，吃好睡好本身就很有意义。”
+              <div class="frame-time">02:23到02:47 后半段 80后的反内耗感悟</div>
+              讲蔡澜晚年清空收藏品，新哥温和地回应网上的评价，现实那么辛苦，逃避一下也无所谓，吃好睡好本身就很有意义。
             </div>
           </div>
         </div>
@@ -1124,26 +1234,26 @@
           <table>
             <thead>
               <tr>
-                <th style="width:120px;">段落与时间</th>
-                <th style="width:360px;">新哥原片逐句台词</th>
-                <th>为什么这段好 / 怎么微调能有更高播放？</th>
+                <th style="width:130px;">段落和时间</th>
+                <th style="width:380px;">新哥原片台词</th>
+                <th>好在哪里，可以怎么微调</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>前半段 · 风物</strong><br/>00:00 – 00:52</td>
-                <td>“这里就是香港，很多人来就是为了吃这一口，接近100年的一个老茶楼，陆羽茶室……你看它的装修风格呀，是上海还有岭南的那种混搭风，桌椅都是老酸枝木的，这种传统一直没变……（粤语：唔该，大包系嘛）猪肉、鲜虾、哇淡淡的苦味融合在一起，真的叫猪润，我吃起来是幸福的味道。”</td>
-                <td><strong>亮点：</strong> 观察很细腻（老酸枝木、上海岭南混搭、粤语点单），比普通探店有文化味得多。<br/><strong>微调建议：</strong> 第一句别只说“这里就是香港”，改成<strong>“在这家桌椅都是老酸枝木、延续近百年的中环老茶室里，藏着蔡澜吃了四十年的早茶……”</strong>，前 3 秒留人率会高很多。</td>
+                <td><strong>前半段 风物</strong><br/>00:00到00:52</td>
+                <td><div class="quote">这里就是香港，很多人来就是为了吃这一口，接近100年的一个老茶楼，陆羽茶室……你看它的装修风格呀，是上海还有岭南的那种混搭风，桌椅都是老酸枝木的，这种传统一直没变……唔该，大包系嘛……猪肉、鲜虾、哇淡淡的苦味融合在一起，真的叫猪润，我吃起来是幸福的味道。</div></td>
+                <td><span class="lbl lbl-good">亮点</span>观察很细，老酸枝木、上海岭南混搭、粤语点单，比普通探店有文化味。<br/><span class="lbl lbl-tip">微调</span>第一句别只说这里就是香港，可以改成<span class="q">在这家桌椅都是老酸枝木、开了近百年的中环老茶室里，蔡澜先生曾经请许知远在这里饮茶</span>，开头就有故事。</td>
               </tr>
               <tr>
-                <td><strong>中场 · 提问过渡</strong><br/>00:53 – 01:36</td>
-                <td>新哥：“你看过许知远的《十三邀》吗？他十年前拍第一季的时候就是蔡澜先生，当时蔡澜邀请许知远就是来这儿录的饮茶那一段……蔡澜说减肥一定要吃好的。”<br/><strong>同行人画外音：“您觉得蔡澜先生对您的影响大吗？”</strong><br/>新哥：“挺大的，他对我最大的影响是该睡觉睡觉，不要想那么多。”</td>
-                <td><strong>亮点：</strong> 镜头外朋友这一句提问（“蔡澜先生对您影响大吗？”）是最自然的过渡方式，一下子把美食探店变成了老友喝茶聊天，以后每条视频都要保留这个<strong>“老友画外音发问”</strong>。</td>
+                <td><strong>中场 提问过渡</strong><br/>00:53到01:36</td>
+                <td><div class="quote"><b>新哥</b> 你看过许知远的十三邀吗？他十年前拍第一季的时候就是蔡澜先生，当时蔡澜邀请许知远就是来这儿录的饮茶那一段……蔡澜说减肥一定要吃好的。<br/><b>同行朋友</b> 您觉得蔡澜先生对您的影响大吗？<br/><b>新哥</b> 挺大的，他对我最大的影响是该睡觉睡觉，不要想那么多。</div></td>
+                <td><span class="lbl lbl-good">亮点</span>朋友在镜头外这一问，是很自然的过渡，一下把探店变成了老友喝茶聊天。<br/><span class="lbl lbl-tip">建议</span>以后每条都可以保留这个<strong>老友镜头外发问</strong>的设计。</td>
               </tr>
               <tr>
-                <td><strong>后半段 · 典故与感悟</strong><br/>01:37 – 02:47</td>
-                <td>“金庸给他做的序，金庸比蔡澜大17岁，他称呼蔡澜为蔡澜兄，说他是真正潇洒的人……他们俩经常结伴旅行，蔡澜对旅程中所有不如意的事情一笑置之，从不抱怨旅途颠簸……他在晚年清空了家里所有收藏品。网上有人说蔡澜整天吃喝玩乐，<strong>如果现实那么辛苦，逃避一下也无所谓啊，吃好睡好本身就很有意义呀！</strong>”</td>
-                <td><strong>亮点：</strong> 金庸大 17 岁称“蔡澜兄”的典故有知识含量，最后那句“如果现实那么辛苦，逃避一下也无所谓”直接促成了 <strong>19 个收藏和 19 个转发</strong>。<br/><strong>微调建议：</strong> 在讲完金庸蔡澜后，加两句新哥自己在香港打拼的真实心境，让观众记住新哥本人。</td>
+                <td><strong>后半段 典故和感悟</strong><br/>01:37到02:47</td>
+                <td><div class="quote">金庸给他做的序，金庸比蔡澜大17岁，他称呼蔡澜为蔡澜兄，说他是真正潇洒的人……他们俩经常结伴旅行，蔡澜对旅程中所有不如意的事情一笑置之，从不抱怨旅途颠簸……他在晚年清空了家里所有收藏品。网上有人说蔡澜整天吃喝玩乐，<strong>如果现实那么辛苦，逃避一下也无所谓啊，吃好睡好本身就很有意义呀！</strong></div></td>
+                <td><span class="lbl lbl-good">亮点</span>金庸大17岁还称蔡澜兄，这个典故有知识含量。最后那句现实那么辛苦逃避一下也无所谓，是全片最容易让人想收藏、转给朋友的一句。<br/><span class="lbl lbl-tip">微调</span>讲完金庸蔡澜，加两句新哥自己在香港生活的真实心境，让观众记住新哥本人。</td>
               </tr>
             </tbody>
           </table>
@@ -1154,24 +1264,24 @@
       <div id="panel-v1" style="display:none;">
         <div class="grid-3" style="margin: 16px 0 20px;">
           <div class="frame-item">
-            <img src="./assets/xinge_v1_hotpot.png" alt="00:01 沙嗲牛肉火锅锅底" onclick="openLightbox(this.src, '00:00-00:05 开场：镜头直接怼在沸腾的沙嗲锅底上，字幕“沙嗲牛肉火锅 / 哇这个才是灵魂呢”')" />
+            <img src="./assets/xinge_v1_hotpot.png" alt="沙嗲牛肉火锅锅底" onclick="openLightbox(this.src, '00:00到00:05 开场 镜头直接对着沸腾的沙嗲锅底，字幕写着沙嗲牛肉火锅，哇这个才是灵魂呢')" />
             <div class="frame-text">
-              <div class="frame-time">00:00 – 00:05 · 开场：镜头太近缺交代</div>
-              第一秒直接怼着黄褐色的沙嗲锅底涮筷子，没交代这是哪、有什么背景，陌生路人前 3 秒很容易划走。
+              <div class="frame-time">00:00到00:05 开场 镜头太近，没交代地方</div>
+              第1秒直接对着黄褐色的沙嗲锅底涮筷子，没交代这是哪里、有什么来头，陌生路人很容易直接划走。
             </div>
           </div>
           <div class="frame-item">
-            <img src="./assets/xinge_v1_person.png" alt="00:21 介绍蔡澜的办公室" onclick="openLightbox(this.src, '00:06-00:26 前半段介绍：九龙城街市3楼熟食中心，蔡澜管它叫“我的办公室”')" />
+            <img src="./assets/xinge_v1_person.png" alt="介绍蔡澜的办公室" onclick="openLightbox(this.src, '00:06到00:26 前半段 九龙城街市3楼熟食中心，蔡澜管它叫我的办公室')" />
             <div class="frame-text">
-              <div class="frame-time">00:06 – 00:26 · 前半段：蔡澜的办公室</div>
-              第 6 秒才开始讲“这里是九龙城街市，蔡澜先生管它叫我的办公室，里面有蔡澜题名和照片”。
+              <div class="frame-time">00:06到00:26 前半段 蔡澜的办公室</div>
+              第6秒才开始讲这里是九龙城街市，蔡澜先生管它叫我的办公室，店里有蔡澜的题字和照片。
             </div>
           </div>
           <div class="frame-item">
-            <img src="./assets/xinge_v1_stall.png" alt="00:33 讲解沙嗲酱虾酱花生酱" onclick="openLightbox(this.src, '00:27-02:25 试吃拆解与后半段感悟：讲解沙嗲酱、虾酱、花生酱、洋葱一起焖煮，后半段切入许知远问“读圣贤书所为何事”')" />
+            <img src="./assets/xinge_v1_stall.png" alt="讲解沙嗲酱虾酱花生酱" onclick="openLightbox(this.src, '00:27到02:25 试吃和后半段感悟 讲沙嗲酱、虾酱、花生酱、洋葱一起焖煮，后半段聊许知远问读圣贤书所为何事')" />
             <div class="frame-text">
-              <div class="frame-time">00:27 – 02:25 · 试吃介绍与后半段感悟</div>
-              先拆解“沙嗲酱、虾酱、花生酱、洋葱一起焖煮”，和朋友碰杯喝啤酒，后半段转入许知远问蔡澜“读圣贤书所为何事”。
+              <div class="frame-time">00:27到02:25 试吃介绍和后半段感悟</div>
+              先讲沙嗲酱、虾酱、花生酱、洋葱一起焖煮，和朋友碰杯喝啤酒，后半段转到许知远问蔡澜读圣贤书所为何事。
             </div>
           </div>
         </div>
@@ -1180,26 +1290,26 @@
           <table>
             <thead>
               <tr>
-                <th style="width:120px;">段落与时间</th>
-                <th style="width:360px;">新哥原片逐句台词</th>
-                <th>为什么这条掉到 10 赞 / 怎么改？</th>
+                <th style="width:130px;">段落和时间</th>
+                <th style="width:380px;">新哥原片台词</th>
+                <th>问题在哪，可以怎么改</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>前半段 · 街市火锅</strong><br/>00:00 – 00:58</td>
-                <td>“哇这个才是灵魂呢。这里是九龙城街市，蔡澜先生管它叫我的办公室，这就是蔡澜先生题名的，里面有蔡澜的照片。这里有个超级好吃的沙嗲牛肉火锅，牛肉爽滑鲜美，沙嗲酱、虾酱、花生酱、洋葱一起焖煮咕嘟咕嘟，很亲民……”（同行人：我都想吃了 / 新哥碰杯：是吧哈哈哈）</td>
-                <td><strong>问题所在：</strong> 00:00-00:05 锅底特写卖相不够抓人，把“蔡澜把街市当办公室”和“许知远问读圣贤书所为何事”藏得太深。<br/><strong>改法：</strong> 把 01:34 那句<strong>“许知远在这个街市问蔡澜：读圣贤书所为何事？蔡澜用一顿沙嗲火锅回答了他”</strong>直接挪到第 1 秒。</td>
+                <td><strong>前半段 街市火锅</strong><br/>00:00到00:58</td>
+                <td><div class="quote">哇这个才是灵魂呢。这里是九龙城街市，蔡澜先生管它叫我的办公室，这就是蔡澜先生题名的，里面有蔡澜的照片。这里有个超级好吃的沙嗲牛肉火锅，牛肉爽滑鲜美，沙嗲酱、虾酱、花生酱、洋葱一起焖煮咕嘟咕嘟，很亲民……<br/><b>同行朋友</b> 我都想吃了<br/><b>新哥</b> 是吧哈哈哈</div></td>
+                <td><span class="lbl lbl-bad">问题</span>开头5秒的锅底特写不够抓人，蔡澜把街市当办公室、许知远问读圣贤书所为何事，这两个最有意思的点都藏得太深。<br/><span class="lbl lbl-tip">改法</span>把01:34那段挪到第1秒，比如<span class="q">许知远在这个街市问蔡澜，读圣贤书所为何事，蔡澜请他吃了一顿沙嗲火锅</span>。</td>
               </tr>
               <tr>
-                <td><strong>中场 · 朋友提问</strong><br/>00:59 – 01:19</td>
-                <td><strong>同行人画外音：“新哥，这么隐秘的地方你是怎么找到的呀？”</strong><br/>新哥：“许知远拍第一季《十三邀》的时候，蔡澜就是在这个地方请他吃火锅。”<br/><strong>同行人：“你看完那个节目有什么感觉？”</strong><br/>新哥：“没太看懂，就感觉他们吃得好香。”</td>
-                <td><strong>亮点：</strong> 这段一问一答非常真实接地气（“没太看懂，就感觉他们吃得好香”带着一点冷幽默），比端着架子讲大道理讨喜得多。</td>
+                <td><strong>中场 朋友提问</strong><br/>00:59到01:19</td>
+                <td><div class="quote"><b>同行朋友</b> 新哥，这么隐秘的地方你是怎么找到的呀？<br/><b>新哥</b> 许知远拍第一季十三邀的时候，蔡澜就是在这个地方请他吃火锅。<br/><b>同行朋友</b> 你看完那个节目有什么感觉？<br/><b>新哥</b> 没太看懂，就感觉他们吃得好香。</div></td>
+                <td><span class="lbl lbl-good">亮点</span>这段一问一答很真实，没太看懂，就感觉他们吃得好香，带一点冷幽默，比端着讲大道理讨喜。</td>
               </tr>
               <tr>
-                <td><strong>后半段 · 人生感悟</strong><br/>01:20 – 02:25</td>
-                <td>“许知远说这个社会蕴含着巨大的焦虑……他问蔡澜读圣贤书所为何事，他的观点是人应该像西方清教徒做深刻自我反省，才能找到平衡。（蔡澜原片：不要把包袱弄太重）<strong>你平衡不了的，有些时候不是说不想就不想，有一天你想累了、身心交瘁就不想了。用美食疗愈你的身心，你就会长出更强大的心脉。</strong>”</td>
-                <td><strong>亮点：</strong> 结尾那句“有一天你想累了就不想了，用美食疗愈身心，长出更强大的心脉”写得很有共鸣。只要把开头前 5 秒改好、同步发到<strong>微信视频号</strong>，这条完全有几千赞的潜质。</td>
+                <td><strong>后半段 人生感悟</strong><br/>01:20到02:25</td>
+                <td><div class="quote">许知远说这个社会蕴含着巨大的焦虑……他问蔡澜读圣贤书所为何事，他的观点是人应该像西方清教徒做深刻自我反省，才能找到平衡。蔡澜原片里说，不要把包袱弄太重。<strong>你平衡不了的，有些时候不是说不想就不想，有一天你想累了、身心交瘁就不想了。用美食疗愈你的身心，你就会长出更强大的心脉。</strong></div></td>
+                <td><span class="lbl lbl-good">亮点</span>结尾这几句很有共鸣。<br/><span class="lbl lbl-tip">建议</span>这条的内容底子不差，把开头5秒改好后可以重新剪一版，同步发到<strong>微信视频号</strong>再测一次。</td>
               </tr>
             </tbody>
           </table>
@@ -1211,13 +1321,13 @@
     <section id="benchmarks" class="section">
       <div class="sec-head">
         <div>
-          <h2><span>03</span> 5 个同类型参考账号与视频（看别人怎么用香港故事与老店拿高赞）</h2>
-          <p class="sec-sub">既有跟新哥题材很接近的“蔡澜推荐香港老店”单条爆款，也有百万粉的“在香港”头部个人账号。点击主页截图可放大。</p>
+          <h2><span>03</span> 5个同类型参考账号和视频</h2>
+          <p class="sec-sub">看别人怎么用香港故事和老店拿高赞。既有和新哥题材很接近的蔡澜推荐老店的单条爆款，也有百万粉的在香港类头部账号。点击主页截图可以放大。</p>
         </div>
         <div class="tabs" id="bench-tabs">
-          <button class="tab-btn active" data-bcat="all">全部对标 (5)</button>
-          <button class="tab-btn" data-bcat="content">同题材爆款视频 (1)</button>
-          <button class="tab-btn" data-bcat="story">香港故事与烟火账号 (4)</button>
+          <button class="tab-btn active" data-bcat="all">全部对标 5</button>
+          <button class="tab-btn" data-bcat="content">同题材爆款视频 1</button>
+          <button class="tab-btn" data-bcat="story">香港故事和烟火账号 4</button>
         </div>
       </div>
 
@@ -1227,17 +1337,19 @@
         <article class="bench-card full-width" data-bcat="content">
           <div class="bench-top">
             <div>
-              <span class="tag tag-green">最直接内容对标 · 同为 2 分钟“蔡澜香港老店 + 故事”中视频</span>
-              <h3>@李哪儿都去 ——《第13集｜盛记大排档，蔡澜说它是香港最好吃的餐厅之一！》</h3>
-              <div class="bench-meta">账号仅 1.4 万粉丝 ｜ 视频时长 02:12（与新哥时长接近） ｜ 单条获赞 <strong>8,255</strong> · 评论 <strong>475</strong> · 收藏 <strong>2,146</strong> · 转发 <strong>3,510</strong></div>
+              <span class="tag tag-green">最直接的内容对标 同样是2分钟左右的蔡澜香港老店加故事</span>
+              <h3>@李哪儿都去 <span class="ttl">第13集 盛记大排档，蔡澜说它是香港最好吃的餐厅之一</span></h3>
+              <div class="bench-meta">账号1.4万粉丝 <i></i> 视频时长02分12秒，和新哥差不多 <i></i> 单条 <strong>8,255</strong>赞 <strong>475</strong>评论 <strong>2,146</strong>收藏 <strong>3,510</strong>转发</div>
             </div>
             <a class="link-btn" href="https://www.douyin.com/video/7277879985103179063" target="_blank" rel="noopener">打开抖音原视频</a>
           </div>
           <div class="takeaway">
-            <strong>为什么同样是 2 分 12 秒拍“蔡澜推崇的香港老店”，他能拿 8,255 赞、3,510 转发？</strong><br/>
-            1. <strong>前 5 秒直接亮出反差</strong>：中环寸土寸金的巷子里，藏着一家蔡澜认证最好吃的铁皮大排档；<br/>
-            2. <strong>前半段不仅拍菜，还拍“人情味”</strong>：拍大排档老板怎么在灶台前颠勺、老街坊怎么拼桌聊天，烟火气很足；<br/>
-            3. <strong>标上了连续剧集数（《第13集｜…》）</strong>：让观众一看就知道这是一个系列专栏，看完会顺手点关注追下一集。新哥马上也可以给作品加上<strong>《新哥寻味香港·第几集》</strong>。
+            <strong>同样是2分12秒拍蔡澜推荐的香港老店，他为什么能拿8,255赞、3,510转发</strong>
+            <ol>
+              <li><strong>开头直接亮出反差</strong> 一家铁皮大排档，被蔡澜说成香港最好吃的餐厅之一，标题和开头就把好奇心勾起来了。</li>
+              <li><strong>前半段不只拍菜，还拍人情味</strong> 拍大排档老板在灶台前颠勺、老街坊拼桌聊天，烟火气很足。</li>
+              <li><strong>标上了集数</strong> 观众一看第13集，就知道这是一个系列，看完会顺手点关注追下一集。新哥也可以统一用<strong>新哥寻味香港 第几集</strong>。</li>
+            </ol>
           </div>
         </article>
 
@@ -1245,17 +1357,17 @@
         <article class="bench-card" data-bcat="story">
           <div class="bench-top">
             <div>
-              <span class="tag tag-blue">香港故事头部账号 · 172.2 万粉丝</span>
-              <h3>阿秦在香港（抖音号：5130453）</h3>
-              <div class="bench-meta">331 作品 ｜ 2,017.7 万获赞 ｜ 简介：在香港生活的湖南伢崽，分享香港的真实故事</div>
+              <span class="tag tag-blue">香港故事头部账号 172.2万粉丝</span>
+              <h3>阿秦在香港 <small>抖音号 5130453</small></h3>
+              <div class="bench-meta">331作品 <i></i> 2,017.7万获赞 <i></i> 简介 在香港生活的湖南伢崽，分享香港的真实故事</div>
             </div>
             <a class="link-btn" href="https://www.douyin.com/user/MS4wLjABAAAAkRKD2Lva0m6ct9hVP071VR9H87P27B-Cvf2Kgt8Mkx4" target="_blank" rel="noopener">看他主页</a>
           </div>
           <div class="bench-body">
-            <img src="./assets/bench_aqin.png" alt="阿秦在香港主页" onclick="openLightbox(this.src, '对标账号：阿秦在香港（172.2万粉丝）——置顶《来香港8年，我后悔吗？》2.0万赞')" />
-            <div style="font-size:13.2px; color:var(--ink-2); display:flex; flex-direction:column; gap:8px;">
-              <div><strong>代表爆款：</strong> 置顶《来香港8年，我后悔吗？》（2.0 万赞）、《全网1亿人看过的励志故事》（4.9 万赞）。</div>
-              <div><strong>新哥怎么参考他：</strong> 阿秦能火，靠的是把“我在香港生活了8年”的人物底色立得很稳。新哥也应该拍一条置顶自述：<strong>《一个80后在香港生活这几年：这座城治好我内耗的，从来不是摩天大楼》</strong>，让进主页的人 60 秒认识新哥。</div>
+            <img src="./assets/bench_aqin.png" alt="阿秦在香港主页" onclick="openLightbox(this.src, '对标账号 阿秦在香港 172.2万粉丝 置顶 来香港8年，我后悔吗 2.0万赞')" />
+            <div class="bench-text">
+              <div><span class="lbl lbl-plain">代表作品</span>置顶的<span class="ttl">来香港8年，我后悔吗？</span>2.0万赞，<span class="ttl">全网1亿人看过墨墨和小波的故事</span>4.9万赞。</div>
+              <div><span class="lbl lbl-tip">新哥怎么参考</span>阿秦把我在香港生活了8年这个人物底色立得很稳。新哥也可以拍一条置顶自述，比如<span class="ttl">一个80后在香港生活这几年，治好我内耗的从来不是摩天大楼</span>，让进主页的人一分钟认识新哥。</div>
             </div>
           </div>
         </article>
@@ -1264,17 +1376,17 @@
         <article class="bench-card" data-bcat="story">
           <div class="bench-top">
             <div>
-              <span class="tag tag-blue">定居香港中产视角 · 39.5 万粉丝</span>
-              <h3>范范在香港（抖音号：bighead_fanfan）</h3>
-              <div class="bench-meta">299 作品 ｜ 305.2 万获赞 ｜ 简介：定居香港 香港理工大学硕士 喜欢旅游跑步</div>
+              <span class="tag tag-blue">定居香港的中产视角 39.5万粉丝</span>
+              <h3>范范在香港 <small>抖音号 bighead_fanfan</small></h3>
+              <div class="bench-meta">299作品 <i></i> 305.2万获赞 <i></i> 简介 定居香港，香港理工大学硕士，喜欢旅游跑步</div>
             </div>
             <a class="link-btn" href="https://www.douyin.com/user/MS4wLjABAAAAle_0uOfxbRkB6_ZefMQlWcZfWqDZQfzRcpvCg_dGUUo" target="_blank" rel="noopener">看他主页</a>
           </div>
           <div class="bench-body">
-            <img src="./assets/bench_fanfan.png" alt="范范在香港主页" onclick="openLightbox(this.src, '对标账号：范范在香港（39.5万粉丝）——置顶《在香港吃火锅要谨慎》1.6万赞、《香港茶餐厅很容易遇到明星》12.6万赞')" />
-            <div style="font-size:13.2px; color:var(--ink-2); display:flex; flex-direction:column; gap:8px;">
-              <div><strong>代表爆款：</strong> 《在香港吃火锅真的太贵了，吃一顿要多少钱？》（1.6 万赞）、《香港茶餐厅很容易遇到明星》（12.6 万赞）。</div>
-              <div><strong>新哥怎么参考他：</strong> 范范很懂怎么用<strong>“香港真实消费/偶遇名流”</strong>做前半段引子。新哥去陆羽茶室或九龙城吃火锅，前半段顺口提一句<strong>这顿茶多少钱、常有哪些老港星熟客坐隔壁桌</strong>，评论区互动会多很多。</div>
+            <img src="./assets/bench_fanfan.png" alt="范范在香港主页" onclick="openLightbox(this.src, '对标账号 范范在香港 39.5万粉丝 置顶 在香港吃火锅要谨慎 1.6万赞，香港茶餐厅很容易遇到明星 12.6万赞')" />
+            <div class="bench-text">
+              <div><span class="lbl lbl-plain">代表作品</span>置顶的<span class="ttl">在香港吃火锅要谨慎</span>1.6万赞，<span class="ttl">香港茶餐厅很容易遇到明星</span>12.6万赞。</div>
+              <div><span class="lbl lbl-tip">新哥怎么参考</span>范范很会用香港真实消费和偶遇名人做开头。新哥去陆羽茶室或者九龙城吃火锅，可以顺口提一句这顿花了多少钱，或者这家店有哪些查得到出处的名人故事，评论区更容易有话聊。</div>
             </div>
           </div>
         </article>
@@ -1283,17 +1395,17 @@
         <article class="bench-card" data-bcat="story">
           <div class="bench-top">
             <div>
-              <span class="tag tag-gray">老港情怀与市井烟火 · 22.2 万粉丝</span>
-              <h3>Hello哥在香港（抖音号：Hello0564）</h3>
-              <div class="bench-meta">1,637 作品 ｜ 615.7 万获赞 ｜ 简介：随拍记录市井烟火、突发彩蛋、明星偶像</div>
+              <span class="tag tag-gray">老港情怀和市井烟火 22.2万粉丝</span>
+              <h3>Hello哥在香港 <small>抖音号 Hello0564</small></h3>
+              <div class="bench-meta">1,637作品 <i></i> 615.7万获赞 <i></i> 简介 爱国爱港，随拍香港街头</div>
             </div>
             <a class="link-btn" href="https://www.douyin.com/user/MS4wLjABAAAAhfutF_eO0VON5v3Ma_wfOZ7WIt3SwL1ZMFDViI2sPmONP-FzaJU-dZCbstjzqzfY" target="_blank" rel="noopener">看他主页</a>
           </div>
           <div class="bench-body">
-            <img src="./assets/bench_helloge.png" alt="Hello哥在香港主页" onclick="openLightbox(this.src, '对标账号：Hello哥在香港（22.2万粉丝）——主打周润发、老戏骨与香港市井烟火')" />
-            <div style="font-size:13.2px; color:var(--ink-2); display:flex; flex-direction:column; gap:8px;">
-              <div><strong>代表爆款：</strong> 周润发与香港老戏骨街头/片场纪实（单条 12.9 万~20.1 万赞）。</div>
-              <div><strong>新哥怎么参考他：</strong> 说明<strong>“周润发、香港四大才子（金庸/蔡澜/黄霑/倪匡）、老港片前辈”</strong>在抖音和视频号都有稳定的 70后/80后受众。新哥在九龙城街市拍视频，完全可以顺着蔡澜延伸到同样常去九龙城街市的发哥。</div>
+            <img src="./assets/bench_helloge.png" alt="Hello哥在香港主页" onclick="openLightbox(this.src, '对标账号 Hello哥在香港 22.2万粉丝 置顶的发哥周润发现场视频 20.1万赞')" />
+            <div class="bench-text">
+              <div><span class="lbl lbl-plain">代表作品</span>置顶的发哥周润发现场视频20.1万赞，另一条置顶香港警察街头视频12.2万赞。</div>
+              <div><span class="lbl lbl-tip">新哥怎么参考</span>说明周润发、四大才子金庸蔡澜黄霑倪匡、老港片前辈这些人物，在抖音上一直有人爱看。发哥这条的背景就在九龙城一带，新哥在九龙城拍视频时，可以从蔡澜延伸到这一带的老港星故事，具体事例先查证再讲。</div>
             </div>
           </div>
         </article>
@@ -1302,17 +1414,17 @@
         <article class="bench-card" data-bcat="story">
           <div class="bench-top">
             <div>
-              <span class="tag tag-gray">香港人文故事与生活攻略 · 13.8 万粉丝</span>
-              <h3>Vicky在香港（抖音号：2157587519）</h3>
-              <div class="bench-meta">77 作品 ｜ 60.6 万获赞 ｜ 简介：“我们不是在异乡漂流，而是在寻找多种生活的可能”</div>
+              <span class="tag tag-gray">香港人文故事和生活攻略 13.8万粉丝</span>
+              <h3>Vicky在香港 <small>抖音号 2157587519</small></h3>
+              <div class="bench-meta">77作品 <i></i> 60.6万获赞 <i></i> 简介 我们不是在异乡漂流，而是在寻找多种生活的可能</div>
             </div>
             <a class="link-btn" href="https://www.douyin.com/user/MS4wLjABAAAAervdDi5ADwE2X5mnVeqJCAHrnCLwCqifJaRNT5uYt7g" target="_blank" rel="noopener">看她主页</a>
           </div>
           <div class="bench-body">
-            <img src="./assets/bench_vicky.png" alt="Vicky在香港主页" onclick="openLightbox(this.src, '对标账号：Vicky在香港（13.8万粉丝）——《她大字不识！香港影坛没人敢小看她？》2727赞')" />
-            <div style="font-size:13.2px; color:var(--ink-2); display:flex; flex-direction:column; gap:8px;">
-              <div><strong>代表爆款：</strong> 《她大字不识！但香港巨星都离不开她（香港茶水阿姐故事）》（2,727 赞）。</div>
-              <div><strong>新哥怎么参考她：</strong> 看她的简介金句（“我们不是在异乡漂流，而是在寻找多种生活的可能”）和讲香港小人物故事的切入角——新哥去老茶室，除了聊蔡澜，也可以聊聊在茶室端了 40 年盘子的老伙计，很有温情。</div>
+            <img src="./assets/bench_vicky.png" alt="Vicky在香港主页" onclick="openLightbox(this.src, '对标账号 Vicky在香港 13.8万粉丝 置顶 她大字不识！香港影坛没人敢小看她 2727赞')" />
+            <div class="bench-text">
+              <div><span class="lbl lbl-plain">代表作品</span>置顶的<span class="ttl">她大字不识！香港影坛没人敢小看她？</span>2,727赞。</div>
+              <div><span class="lbl lbl-tip">新哥怎么参考</span>可以学她的简介写法和讲香港小人物的角度。新哥去老茶室，除了聊蔡澜，也可以聊聊在茶室做了几十年的老伙计，很有温情。</div>
             </div>
           </div>
         </article>
@@ -1320,119 +1432,125 @@
       </div>
     </section>
 
-    <!-- Section 4: IP Upgrade & 120s Template -->
+    <!-- Section 4: Plan & Template -->
     <section id="template" class="section">
       <div class="sec-head">
         <div>
-          <h2><span>04</span> 顺着原有风格的升级方案与 120 秒拍摄模板</h2>
-          <p class="sec-sub">不改新哥慢条斯理的文人调性，也不强加商业推销，只把<strong>主页包装、封面质感、前 5 秒开场句和视频号分发</strong>这四件事做对。</p>
+          <h2><span>04</span> 顺着原有风格的升级方案和120秒拍摄模板</h2>
+          <p class="sec-sub">不改新哥慢条斯理的文人调性，也不加商业推销，只把<strong>主页包装、封面、开头第一句和视频号分发</strong>这四件事做好。</p>
         </div>
       </div>
 
-      <div class="grid-2" style="margin-bottom: 22px;">
+      <div class="grid-2" style="margin-bottom: 24px;">
         <!-- Left Card: Douyin -->
         <div class="plan-card douyin">
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid #e2e8f0; padding-bottom:12px;">
-            <strong style="font-size:16px;">抖音端 · 抓公域推荐与地点搜索</strong>
-            <span class="tag tag-douyin">公域推荐与地点搜索</span>
+          <div class="plan-head">
+            <strong>抖音端 抓推荐和地点搜索</strong>
+            <span class="tag tag-douyin">公域推荐</span>
           </div>
 
-          <div class="kv-row"><span class="kv-key">账号定位</span><div><strong>80后新哥的香港人文饭局</strong>：在百年茶室与市井排档里，前半段看懂一处老港风物，后半段聊透中年人的不内耗活法。</div></div>
-          <div class="kv-row"><span class="kv-key">合集与定位</span><div>在抖音建<strong>《新哥寻味·香港名士饭堂》</strong>与<strong>《80后香港散步手记》</strong>两个合集；发视频左下角必挂香港餐厅具体地址（如中国香港·陆羽茶室），带标签 #香港 #蔡澜 #80后 #十三邀。</div></div>
+          <div class="kv-row"><span class="kv-key">账号定位</span><div><strong>80后新哥的香港人文饭局</strong>。在百年茶室和市井排档里，前半段看懂一处老港风物，后半段聊聊中年人不内耗的活法。</div></div>
+          <div class="kv-row"><span class="kv-key">系列和合集</span><div>主系列统一叫<strong>新哥寻味香港</strong>，标题前加第几集，另外可以开一个<strong>80后香港散步手记</strong>合集放日常。每条都挂餐厅地点定位，比如陆羽茶室，话题带 #香港 #蔡澜 #80后 #十三邀。</div></div>
 
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
-            <div style="border:1px solid #fecaca; background:#fffafa; border-radius:8px; padding:10px;">
-              <img src="./assets/xinge_profile.png" alt="旧封面抠图白边" style="width:100%; height:118px; object-fit:cover; object-position:center 72%; border-radius:6px; cursor:zoom-in;" onclick="openLightbox(this.src, '旧封面：真人加粗白边抠图加生牛肉，削弱了新哥本人的儒雅感')" />
-              <div style="font-size:12px; color:var(--ink-2); margin-top:6px;"><strong>旧封面（白边抠图）：</strong> 偏搞笑吃播风，压住了新哥的儒雅气质。</div>
+          <div class="cover-compare">
+            <div class="cover-card old">
+              <img src="./assets/xinge_profile.png" alt="旧封面白边抠图" style="object-position:center 72%;" onclick="openLightbox(this.src, '旧封面 真人加粗白边抠图加生牛肉，削弱了新哥本人的儒雅感')" />
+              <div><strong>旧封面 白边抠图</strong> 偏搞笑吃播风，压住了新哥的儒雅气质。</div>
             </div>
-            <div style="border:1px solid #cbd5e1; background:#ffffff; border-radius:8px; padding:10px;">
-              <img src="./assets/xinge_v2_teacup.png" alt="建议新封面原片实拍" style="width:100%; height:118px; object-fit:cover; object-position:75% 25%; border-radius:6px; cursor:zoom-in;" onclick="openLightbox(this.src, '建议新封面：直接用原片00:07坐在茶室端起茶杯的实拍画面，配两行干净港风字体')" />
-              <div style="font-size:12px; color:var(--ink-2); margin-top:6px;"><strong>新封面（实景原片）：</strong> 用原片 00:07 端茶杯画面满屏做底，不抠图。</div>
+            <div class="cover-card new">
+              <img src="./assets/xinge_v2_teacup.png" alt="建议新封面原片实拍" style="object-position:75% 25%;" onclick="openLightbox(this.src, '建议新封面 直接用原片00:07坐在茶室端茶杯的画面，配两行干净的字')" />
+              <div><strong>新封面 实景原片</strong> 用原片00:07端茶杯的画面满屏做底，不抠图。</div>
             </div>
           </div>
 
           <div class="douyin-box">
-            <strong>抖音推荐规律：</strong> 抖音前 5 秒决定留存，开头第一句话就要把后半段的名士反差抛出来，先把刷视频的陌生人留住，再看店、听感悟。建议统一在晚上 19:30~21:00 之间发布。
+            <strong>抖音这边要注意</strong> 抖音开头几秒很关键，第一句话就把后半段的名士故事抛出来，先把刷到的陌生人留住，再看店、听感悟。发布时间建议固定在晚上7点半到9点之间。
           </div>
 
           <div class="bio-wrap">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-              <strong style="font-size:13px;">抖音主页简介（干净人文版）</strong>
+            <div class="bio-head">
+              <strong>抖音主页简介</strong>
               <button class="copy-btn" onclick="copyText('xinge-bio-dy', this)">复制抖音简介</button>
             </div>
             <div class="bio-pre" id="xinge-bio-dy">一个在香港生活的80后。
-喜欢钻进香港的百年茶室与街市排档，一口老味道，半生新感悟。
+喜欢钻进香港的百年茶室和街市排档，一口老味道，半生新感悟。
 不去网红打卡点，只去有故事的老地方。
-和你聊聊这座城的烟火气，还有我们80后的不内耗活法。</div>
+和你聊聊这座城的烟火气，还有我们80后不内耗的活法。</div>
           </div>
         </div>
 
         <!-- Right Card: WeChat Channels -->
         <div class="plan-card wechat">
-          <div style="display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; border-bottom:1px solid #bbf7d0; padding-bottom:12px;">
-            <strong style="font-size:16px; color:#065f46;">微信视频号 · 35~60 岁社交转发主阵地</strong>
-            <span class="tag tag-wechat">契合微信熟人转发</span>
+          <div class="plan-head wechat">
+            <strong>微信视频号 熟人转发阵地</strong>
+            <span class="tag tag-wechat">适合朋友圈转发</span>
           </div>
 
-          <div class="kv-row"><span class="kv-key">核心优势</span><div>视频号主力受众正是 <strong>35~60 岁、对蔡澜、金庸与老香港有深厚情怀的同龄人</strong>。新哥第 1 条在抖音 50 赞里就有 19 人收藏、19 人转发，放到视频号天然容易被转到老友群和朋友圈。</div></div>
-          <div class="kv-row"><span class="kv-key">冷启动3步</span><div>1. 同步发 1分30秒到2分钟的完整中视频，不急躁，视频号完播率高；<br/>2. 发完请新哥和身边 15~20 位微信好友点底部的<strong>“红心（推荐给朋友）”</strong>；<br/>3. 新哥发朋友圈配一段走心短句，带动熟人二次转发。</div></div>
+          <div class="kv-row"><span class="kv-key">为什么做</span><div>视频号上中年用户多，<strong>对蔡澜、金庸和老香港有感情的同龄人</strong>不少。新哥第1条在抖音50个赞里就有19人收藏、19人转发，这类内容放到视频号，更容易被转进老友群和朋友圈。</div></div>
+          <div class="kv-row"><span class="kv-key">起号三步</span><div>
+            <ol class="plain-ol">
+              <li>同步发1分半到2分钟的完整版，视频号用户对慢节奏的中视频更有耐心。</li>
+              <li>发完请新哥和身边15到20位微信好友点底部的<strong>大拇指推荐</strong>，推荐了才会出现在他们朋友的视频号里。</li>
+              <li>新哥发朋友圈配一段走心的话，带动熟人二次转发。</li>
+            </ol>
+          </div></div>
 
           <div class="wechat-box">
-            <strong>视频号与抖音的核心区别：</strong> 抖音靠陌生人完播率推流，视频号靠<strong>“微信好友点红心推荐加朋友圈转发”</strong>滚雪球。新哥这种儒雅慢聊的调性，在视频号更容易靠熟人转发跑出稳定曝光。
+            <strong>视频号和抖音的区别</strong> 抖音主要靠陌生人看完率推流，视频号很大一部分靠微信好友点推荐和朋友圈转发，一圈一圈往外扩。新哥这种儒雅慢聊的调性，在视频号更容易靠熟人转发起量。
           </div>
 
-          <div class="bio-wrap" style="display:flex; flex-direction:column; gap:12px;">
+          <div class="bio-wrap stack">
             <div>
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                <strong style="font-size:13px; color:#065f46;">视频号主页简介</strong>
+              <div class="bio-head">
+                <strong style="color:#065f46;">视频号主页简介</strong>
                 <button class="copy-btn wechat-btn" onclick="copyText('xinge-bio-wx', this)">复制视频号简介</button>
               </div>
-              <div class="bio-pre wechat-bio" id="xinge-bio-wx">一个在香港生活的80后 ｜《香港名士饭堂》更新中
-钻进百年茶室与街市老铺，聊老味道、名士往事与中年不内耗。</div>
+              <div class="bio-pre wechat-bio" id="xinge-bio-wx">一个在香港生活的80后，新哥寻味香港更新中。
+钻进百年茶室和街市老铺，聊老味道、名士往事和中年不内耗。</div>
             </div>
             <div>
-              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-                <strong style="font-size:13px; color:#065f46;">新哥发朋友圈配文参考（发视频时配卡片用）</strong>
+              <div class="bio-head">
+                <strong style="color:#065f46;">朋友圈配文参考</strong>
                 <button class="copy-btn wechat-btn" onclick="copyText('xinge-moments-wx', this)">复制朋友圈配文</button>
               </div>
-              <div class="bio-pre wechat-bio" id="xinge-moments-wx">在香港生活这几年，每次心里觉得累了，就会跑去陆羽茶室坐坐。点一笼蔡澜先生最爱的猪润烧麦，想想那句“吃好睡好本身就很有意义”，好多拧巴的事一下子就想通了。记录一段随笔，也祝老朋友们顺心自在。</div>
+              <div class="bio-pre wechat-bio" id="xinge-moments-wx">在香港生活这几年，每次心里觉得累了，就会跑去陆羽茶室坐坐。点一笼蔡澜先生最爱的猪润烧麦，想想那句吃好睡好本身就很有意义，好多拧巴的事一下子就想通了。记录一段随笔，也祝老朋友们顺心自在。</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- 120s Golden Structure Table -->
+      <!-- 120s Structure Table -->
       <div class="panel">
-        <h3 style="font-size:16.5px; font-weight:700; margin-bottom:12px;">新哥专属“前半段风物介绍、后半段人生感悟”120 秒标准结构表</h3>
+        <h3 class="panel-title">新哥专属120秒拍摄结构 前半段介绍风物，后半段聊人生感悟</h3>
         <div class="table-box" style="border:none;">
           <table>
             <thead>
               <tr>
-                <th style="width:140px;">阶段与时长</th>
-                <th style="width:230px;">画面拍什么</th>
-                <th>口播怎么讲（保留文人感，把钩子提上来）</th>
+                <th style="width:150px;">步骤和时长</th>
+                <th style="width:240px;">画面拍什么</th>
+                <th>口播怎么讲 保留文人感，把钩子提到前面</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>第 1 步 · 开头立悬念</strong><br/>00:00 – 00:10</td>
-                <td>新哥坐在有年代感的店里端茶或夹菜，或走过百年老招牌。</td>
-                <td><div class="voice-box"><strong>把后半段的名士反差提炼成第一句话：</strong><br/>“在（香港某地）这间开了多少年的老店里，（蔡澜/金庸/黄霑）曾留下过一个故事……今天新哥带你坐进这张老桌子。”前 5 秒先锁住同频观众。</div></td>
+                <td><strong>第1步 开头立悬念</strong><br/>00:00到00:10</td>
+                <td>新哥坐在有年代感的店里端茶或夹菜，或者走过百年老招牌。</td>
+                <td><div class="voice-box"><strong>把后半段的名士故事提炼成第一句话</strong><br/><span class="q">在香港这家开了几十年的老店里，蔡澜先生曾经留下过一个故事，今天新哥带你坐进这张老桌子。</span>店名、人物和年份按每期真实情况替换，开头几秒先锁住同频的观众。</div></td>
               </tr>
               <tr>
-                <td><strong>第 2 步 · 前半段介绍</strong><br/>00:10 – 00:50</td>
-                <td>老店木桌椅、老菜单、伙计冲茶端盘子、招牌菜热气特写。</td>
-                <td><div class="voice-box"><strong>延续《陆羽茶室》的细腻观察：</strong><br/>讲这里的装修器物几十年没变，跟伙计自然讲两句粤语点单（“唔该”），细致描述这道菜的食材讲究与入口滋味。</div></td>
+                <td><strong>第2步 前半段介绍</strong><br/>00:10到00:50</td>
+                <td>老店木桌椅、老菜单、伙计冲茶端盘子、招牌菜冒热气的特写。</td>
+                <td><div class="voice-box"><strong>延续陆羽茶室那条的细腻观察</strong><br/>讲这里的装修器物几十年没变，跟伙计自然地用粤语点单说声唔该，再细致描述这道菜的食材讲究和入口滋味。</div></td>
               </tr>
               <tr>
-                <td><strong>第 3 步 · 朋友提问过渡</strong><br/>00:50 – 01:05</td>
-                <td>新哥放下筷子喝口茶或碰杯，镜头外的同行老友顺势发问。</td>
-                <td><div class="voice-box"><strong>保留现有的“画外音老友提问”设计：</strong><br/>同行人问：“新哥，香港那么多新餐厅，你怎么总爱往这种几十年的老地方钻？”用朋友对话自然拐进名士掌故。</div></td>
+                <td><strong>第3步 朋友提问过渡</strong><br/>00:50到01:05</td>
+                <td>新哥放下筷子喝口茶或者碰杯，镜头外的同行老友顺势发问。</td>
+                <td><div class="voice-box"><strong>保留现在老友镜头外提问的设计</strong><br/>朋友问<span class="q">新哥，香港那么多新餐厅，你怎么总爱往这种几十年的老地方钻？</span>用朋友对话自然拐进名士掌故。</div></td>
               </tr>
               <tr>
-                <td><strong>第 4 步 · 后半段感悟</strong><br/>01:05 – 02:00</td>
-                <td>新哥温和慢聊，穿插少量名士老照片或香港街景空镜。</td>
-                <td><div class="voice-box"><strong>名士轶事 + 两句新哥自己的 80 后经历 + 收尾金句：</strong><br/>先讲一段金庸、蔡澜或黄霑的豁达往事，再带上两句“到了我们 80 后这个年纪，在香港生活这几年我常觉得……”，最后用一句让人愿意转发给朋友的大白话金句收尾。</div></td>
+                <td><strong>第4步 后半段感悟</strong><br/>01:05到02:00</td>
+                <td>新哥温和慢聊，穿插少量名士老照片或者香港街景空镜。</td>
+                <td><div class="voice-box"><strong>名士往事，加两句新哥自己的经历，再加一句收尾</strong><br/>先讲一段金庸、蔡澜或者黄霑的豁达往事，再带两句<span class="q">到了我们80后这个年纪，在香港生活这几年我常觉得……</span>，最后用一句让人愿意转给朋友的大白话收尾。</div></td>
               </tr>
             </tbody>
           </table>
@@ -1441,8 +1559,8 @@
     </section>
 
     <footer>
-      <span>整理时间：2026-11-23 ｜ 账号：新哥在香港（抖音号 51415117235）</span>
-      <span>点击页面中任意图片均可全屏放大查看细节</span>
+      <span>整理时间 2026年11月23日 <i></i> 数据为当天抖音前台公开数据 <i></i> 账号 新哥在香港 抖音号 51415117235</span>
+      <span>点击页面里的图片都可以放大查看</span>
     </footer>
 
   </main>
