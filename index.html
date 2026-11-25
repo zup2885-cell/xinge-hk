@@ -1056,6 +1056,18 @@
       .cover-compare { grid-template-columns: 1fr; }
       .issue-item { padding: 18px; }
     }
+
+    /* 优点区 */
+    .grid-good { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .good-item {
+      background: var(--surface); border: 1px solid #a7f3d0; border-top: 3px solid var(--good);
+      border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow);
+    }
+    .good-num { font-size: 12px; font-weight: 700; color: var(--good); margin-bottom: 6px; letter-spacing: 0.04em; }
+    .good-item h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 10px; color: var(--ink); }
+    .good-item p { font-size: 14.5px; line-height: 1.85; color: var(--ink-2); }
+    @media (max-width: 960px) { .grid-good { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { .grid-good { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -1064,7 +1076,8 @@
     <div class="topbar-inner">
       <div class="doc-title">新哥在香港 账号复盘与内容规划<span>抖音和微信视频号</span></div>
       <nav class="nav-links">
-        <a href="#diag">风格诊断</a>
+        <a href="#strengths">做得好的地方</a>
+        <a href="#diag">可以调的地方</a>
         <a href="#transcript">两条作品逐句拆解</a>
         <a href="#benchmarks">同类型对标</a>
         <a href="#template">双端方案与模板</a>
@@ -1119,12 +1132,54 @@
       </div>
     </section>
 
-    <!-- Section 1: Style Diagnosis -->
-    <section id="diag" class="section" style="margin-top: 36px;">
+    <!-- Section 0: Strengths -->
+    <section id="strengths" class="section" style="margin-top: 36px;">
       <div class="sec-head">
         <div>
-          <h2><span>01</span> 两条作品对比和4个主要问题</h2>
-          <p class="sec-sub">风格本身没有问题，主要吃亏在开头太慢、题材偏窄、新哥自己的印记还不够。</p>
+          <h2><span>01</span> 先说做得好的地方 这些要保留</h2>
+          <p class="sec-sub">两条视频看下来，新哥这个号的底子是好的，方向、人设和讲法都有自己的东西，后面的调整都是在这些优点上往前推。</p>
+        </div>
+      </div>
+      <div class="grid-good">
+        <div class="good-item">
+          <div class="good-num">优点01</div>
+          <h3>方向选对了</h3>
+          <p>香港老店加名士掌故，再落到人生感悟，比普通探店多了一层文化味。在一堆在香港类的账号里，这个方向有自己的区分度。</p>
+        </div>
+        <div class="good-item">
+          <div class="good-num">优点02</div>
+          <h3>第1条已经证明有人买账</h3>
+          <p>陆羽茶室那条50个赞里，有19人收藏、19人转发。愿意存下来、转给朋友的人比例很高，说明内容是有人真心认可的。</p>
+        </div>
+        <div class="good-item">
+          <div class="good-num">优点03</div>
+          <h3>人和题材很搭</h3>
+          <p>80后，西装眼镜，说话慢条斯理，有书卷气。这种气质跟百年茶室、蔡澜金庸这类老香港题材是对得上的，观众看着信服。</p>
+        </div>
+        <div class="good-item">
+          <div class="good-num">优点04</div>
+          <h3>观察细，有在地感</h3>
+          <p>老酸枝木桌椅、上海和岭南混搭的装修、用粤语跟伙计点单，一看就是真在香港生活的人拍的，不是游客打卡。</p>
+        </div>
+        <div class="good-item">
+          <div class="good-num">优点05</div>
+          <h3>结构自然，像老友喝茶</h3>
+          <p>同行朋友在镜头外问一句，就把探店变成了老友聊天，后面接名士故事一点都不生硬。这个设计很难得，后面要一直保留。</p>
+        </div>
+        <div class="good-item">
+          <div class="good-num">优点06</div>
+          <h3>金句有共鸣，也有幽默感</h3>
+          <p>像<span class="q">吃好睡好本身就很有意义</span>、<span class="q">用美食疗愈身心，长出更强大的心脉</span>，还有那句<span class="q">没太看懂，就感觉他们吃得好香</span>，有温度，也不端着。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Style Diagnosis -->
+    <section id="diag" class="section">
+      <div class="sec-head">
+        <div>
+          <h2><span>02</span> 可以再调一调的4个地方</h2>
+          <p class="sec-sub">在这些优点的基础上，下面4个地方调一调，效果会更好。风格本身不用改，主要是开头再快一点、题材再宽一点、新哥自己的故事再多一点。</p>
         </div>
       </div>
 
@@ -1188,7 +1243,7 @@
     <section id="transcript" class="section">
       <div class="sec-head">
         <div>
-          <h2><span>02</span> 两条作品逐句拆解 先介绍后感悟的三段结构</h2>
+          <h2><span>03</span> 两条作品逐句拆解 先介绍后感悟的三段结构</h2>
           <p class="sec-sub">把两条视频的原话都整理了出来。新哥的拍法很清楚，<strong>前半段介绍香港老店和味道，中间靠同行朋友在镜头外提问过渡，后半段聊名士往事和自己的感悟</strong>。点击图片可以放大。</p>
         </div>
         <div class="tabs" id="vid-tabs">
@@ -1321,7 +1376,7 @@
     <section id="benchmarks" class="section">
       <div class="sec-head">
         <div>
-          <h2><span>03</span> 5个同类型参考账号和视频</h2>
+          <h2><span>04</span> 5个同类型参考账号和视频</h2>
           <p class="sec-sub">看别人怎么用香港故事和老店拿高赞。既有和新哥题材很接近的蔡澜推荐老店的单条爆款，也有百万粉的在香港类头部账号。点击主页截图可以放大。</p>
         </div>
         <div class="tabs" id="bench-tabs">
@@ -1436,7 +1491,7 @@
     <section id="template" class="section">
       <div class="sec-head">
         <div>
-          <h2><span>04</span> 顺着原有风格的升级方案和120秒拍摄模板</h2>
+          <h2><span>05</span> 顺着原有风格的升级方案和120秒拍摄模板</h2>
           <p class="sec-sub">不改新哥慢条斯理的文人调性，也不加商业推销，只把<strong>主页包装、封面、开头第一句和视频号分发</strong>这四件事做好。</p>
         </div>
       </div>
